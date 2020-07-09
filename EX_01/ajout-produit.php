@@ -16,5 +16,12 @@ try {
  echo "Connection failed: ". $e->getMessage();
  }
 }
-connect_to_database();
 ?>
+<?php
+$ctd = connect_to_database();
+
+$stmt = $ctd->prepare ('INSERT INTO Produit (Id, Nom, Description, Prix, Quantité) VALUES(8, "T-shirt noir", "T-shirt coton de couleur noire", 15.50, 10) ') ;
+$stmt->execute();
+?>
+
+</html>
