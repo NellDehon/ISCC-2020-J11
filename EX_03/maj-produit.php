@@ -19,6 +19,8 @@ try {
 ?>
 <?php
 $ctd = connect_to_database();
-$stmt = $ctd->prepare ('UPDATE Produit SET id = 4, WHERE quantite = 1') ;
+ 
+$stmt = $ctd->prepare ('UPDATE  Produit SET Quantité = 1 WHERE Nom LIKE "%Short bleu%"');
 $stmt->execute();
 ?>
+</html>
